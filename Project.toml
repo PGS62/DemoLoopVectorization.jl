@@ -3,11 +3,15 @@ uuid = "99d4136f-298c-48a3-89ff-3618d2191958"
 authors = ["Philip Swannell"]
 version = "0.1.0"
 
-[extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+[deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+LoopVectorization = "bdcacae8-1622-11e9-2a5c-532679323890"
 
 [compat]
 julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
 test = ["Test"]

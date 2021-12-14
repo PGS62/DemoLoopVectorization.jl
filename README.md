@@ -55,6 +55,7 @@ Philip Swannell
 └ @ Requires ~/.julia/packages/Requires/7Ncym/src/require.jl:49
 ```
 
+Version information:
 ```
 julia> versioninfo()
 Julia Version 1.7.0

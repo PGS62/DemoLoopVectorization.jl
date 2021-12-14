@@ -11,6 +11,10 @@ It seems that if a package (such as this one) has LoopVectorization as a depende
 
 These problems can be replicated by cloning this package and executing file `src/compile.jl` to create an executable (in folder `DemoLoopVectorization_compiled_for_linux/bin`) and then running that executable. Compilation takes approx half an hour.
 
+## Update
+
+In the call to `PackageCompiler.create_app`, setting keyword argument `include_transitive_dependencies=false` seems to fix the first problem and also reduce latency to about 1 second.
+
 Philip Swannell  
 14 Dec 2021
 

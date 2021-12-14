@@ -6,8 +6,8 @@ This package is designed to be minimum working example of an issue with Julia pa
 
 It seems that if a package (such as this one) has LoopVectorization as a dependency, and is also compiled to an executable using PackageCompiler, then two problems arise:
 
- * At run time, the executable emits a warning `Error requiring ForwardDiff from LoopVectorization` (full text below).
- * There is significant latency when running the executable, consistent with some compilation being necessary, even though all code executed should have been properly ahead-of-time compiled via the `precompile_execution_file` argument to `PackageCompiler.create_app`
+ * At run time, the executable emits a warning `Error requiring ForwardDiff from LoopVectorization` (full text below). The warning is not emited when running the code "normally", and contrary to the warning LoopVectorization _does_ have SIMDDualNumbers as a dependency.
+ * There is noticeable latency when running the executable, consistent with some compilation being necessary, even though all code executed should have been properly ahead-of-time compiled via the `precompile_execution_file` argument to `PackageCompiler.create_app`. In my tests (Surface Book 2, Linux under WSL, Julia 1.7) this latency is about 19 seconds.
 
 These problems can be replicated by cloning this package and executing file `src/compile.jl`.
 

@@ -54,3 +54,31 @@ Philip Swannell
 │    in expression starting at /home/philip/.julia/packages/LoopVectorization/kVenK/src/simdfunctionals/vmap_grad_forwarddiff.jl:2
 └ @ Requires ~/.julia/packages/Requires/7Ncym/src/require.jl:49
 ```
+
+```
+julia> versioninfo()
+Julia Version 1.7.0
+Commit 3bf9d17731 (2021-11-30 12:12 UTC)
+Platform Info:
+  OS: Linux (x86_64-pc-linux-gnu)
+  CPU: Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz
+  WORD_SIZE: 64
+  LIBM: libopenlibm
+  LLVM: libLLVM-12.0.1 (ORCJIT, skylake)
+Environment:
+  JULIA_NUM_THREADS = 8
+  
+(DemoLoopVectorization) pkg> st
+     Project DemoLoopVectorization v0.1.0
+      Status `/mnt/c/Projects/DemoLoopVectorization/Project.toml`
+  [6e4b80f9] BenchmarkTools v1.2.2
+  [bdcacae8] LoopVectorization v0.12.99
+
+(@v1.7) pkg> st
+      Status `~/.julia/environments/v1.7/Project.toml`
+  [5fb14364] OhMyREPL v0.5.10
+  [9b87118b] PackageCompiler v2.0.4
+  [295af30f] Revise v3.2.0
+  
+```
+

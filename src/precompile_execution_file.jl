@@ -2,6 +2,6 @@
 
 using DemoLoopVectorization
 
-comparethreemeans()
+comparemethods()
 
 @info "Executing file $(@__FILE__) finished"

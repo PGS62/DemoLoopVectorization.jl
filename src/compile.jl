@@ -29,4 +29,6 @@ precompile_execution_file = joinpath(srcfolder,"precompile_execution_file.jl")
 cd(startfolder)
 Pkg.activate(packagename)
 Pkg.instantiate()
-create_app(packagename, compiled_app, force=true, precompile_execution_file=precompile_execution_file)
+create_app(packagename, compiled_app, force=true, 
+           precompile_execution_file=precompile_execution_file,
+           include_transitive_dependencies=false)
